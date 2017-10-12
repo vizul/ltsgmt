@@ -1,0 +1,54 @@
+{
+	"name": "nextras/orm",
+	"type": "library",
+	"description": "Nextras Orm framework",
+	"keywords": [
+		"orm",
+		"database",
+		"nextras"
+	],
+	"homepage": "https://github.com/nextras/orm",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Nextras Project",
+			"homepage": "https://github.com/nextras/orm/graphs/contributors"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/nextras/orm/issues"
+	},
+	"require": {
+		"php": ">=7.0",
+		"nette/caching": "~2.2",
+		"nette/utils": "~2.4 >=2.4.3",
+		"nette/tokenizer": "~2.2",
+		"nextras/dbal": "~3.0@dev"
+	},
+	"require-dev": {
+		"nette/bootstrap": "~2.3",
+		"nette/tester": "~1.4",
+		"mockery/mockery": "~1.0@dev",
+		"phpstan/phpstan-shim": "~0.8.3",
+		"tracy/tracy": "~2.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Nextras\\Orm\\": "src/"
+		},
+		"classmap": [
+			"src/exceptions.php"
+		]
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/cases",
+			"tests/inc"
+		]
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "3.0-dev"
+		}
+	}
+}

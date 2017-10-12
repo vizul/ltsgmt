@@ -1,0 +1,19 @@
+{block content}
+<h1>Skupiny</h1>
+
+<a n:href="Group:create">Přidat skupinu</a>
+
+{foreach $groups as $group}
+<h2>{$group->title}</h2>
+<a n:href="Group:edit $group->id">Upravit</a>
+<a n:href="deleteGroup! $group->id">Smazat</a>
+<hr>
+{/foreach}
+
+
+<h1>Uživatelé</h1>
+
+{foreach $users as $usr}
+<h2>{$usr->firstName}</h2>
+<hr>
+{/foreach}

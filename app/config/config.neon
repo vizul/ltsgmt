@@ -1,0 +1,23 @@
+parameters:
+
+extensions:
+	dbal: Nextras\Dbal\Bridges\NetteDI\DbalExtension
+	orm: Nextras\Orm\Bridges\NetteDI\OrmExtension
+
+php:
+	date.timezone: Europe/Prague
+	
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+		# *: App\*Module\*Presenter
+
+session:
+	expiration: 14 days
+
+orm:
+	model: App\Model\Orm\Orm
+
+services:
+	router: App\RouterFactory::createRouter
